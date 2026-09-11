@@ -19,47 +19,6 @@ demo video: https://drive.google.com/file/d/1zmNALnUtqhiJQWjD7kk94YrMHacoNfCG/v
   * Player 1 and Player 2
   * Alternating turns
   * 8 × 8 game board
-* 🚢 **Battleship placement**
-
-  * Two ships per player
-  * Supports ship sizes `4 × 2` and `3 × 3`
-  * Automatic boundary checking
-  * Prevents overlapping ships
-* 🎯 **Coordinate-based attacks**
-
-  * Move a cursor across the 8 × 8 board
-  * Select a coordinate to attack
-  * Prevents repeatedly attacking the same position
-* 💥 **Hit / miss detection**
-
-  * Correct guesses increase the player's score
-  * Incorrect guesses switch the game to the other player
-  * Previously selected positions are recorded
-* 🏆 **Win condition**
-
-  * A player wins after reaching **17 points**
-  * Winner information is displayed on the OLED
-* 💡 **MAX7219 LED Matrix**
-
-  * Displays ship locations
-  * Displays attack positions
-  * Shows the current cursor position
-  * Provides visual feedback for hit / miss events
-* 📺 **SSD1306 OLED**
-
-  * Displays game status
-  * Shows player readiness
-  * Displays ship configuration coordinates
-  * Displays current turn, cursor position, and score
-  * Displays the final winner
-* 🔊 **Audio feedback**
-
-  * Different sound patterns are generated for game events
-  * Buzzer output is controlled through the 8051 GPIO
-* 🎮 **Physical button / keyboard input**
-
-  * Buttons are used for player confirmation and game actions
-  * Matrix-style movement is controlled through the keyboard interface
 
 ---
 
@@ -447,7 +406,7 @@ main()
 This provides a simple finite-state-machine-like software architecture.
 
 ---
-
+<!--
 ## Core Algorithms
 
 ### Overlap Detection
@@ -516,6 +475,7 @@ The corresponding column is then updated on the MAX7219 matrix.
 
 This allows the cursor to be displayed without modifying the rest of the board state.
 
+-->
 ---
 
 ## Build System
@@ -632,6 +592,7 @@ This removes the generated `obj/` directory and `main.hex`.
 The repository contains both the compiled firmware and the intermediate SDCC compilation outputs. The header files under `inc/` provide interfaces for timing, MAX7219, I²C, OLED, and common utility functions.
 
 ---
+<!--
 
 ## Main Components
 
@@ -656,7 +617,7 @@ The repository contains both the compiled firmware and the intermediate SDCC com
 | `table.h`      | Lookup-table / constant data             |
 
 The generated assembly listing confirms that the firmware contains dedicated routines for game modes, overlap detection, drawing, deletion, board-cell access, OLED output, MAX7219 control, and keyboard input.
-
+-->
 ---
 
 ## Hardware / Software Stack
