@@ -475,7 +475,7 @@ The corresponding column is then updated on the MAX7219 matrix.
 
 This allows the cursor to be displayed without modifying the rest of the board state.
 
--->
+
 ---
 
 ## Build System
@@ -524,7 +524,7 @@ packihx
 and stores intermediate compilation results under `obj/`.
 
 ---
-
+-->
 ## Build
 
 ### Requirements
@@ -617,8 +617,9 @@ The repository contains both the compiled firmware and the intermediate SDCC com
 | `table.h`      | Lookup-table / constant data             |
 
 The generated assembly listing confirms that the firmware contains dedicated routines for game modes, overlap detection, drawing, deletion, board-cell access, OLED output, MAX7219 control, and keyboard input.
--->
+
 ---
+-->
 
 ## Hardware / Software Stack
 
@@ -643,7 +644,7 @@ The generated assembly listing confirms that the firmware contains dedicated rou
    MAX7219         SSD1306         Buzzer
    LED Matrix       OLED           Audio
 ```
-
+<!--
 ---
 
 ## Technologies
@@ -661,8 +662,11 @@ The generated assembly listing confirms that the firmware contains dedicated rou
 * **Bitwise Operations**
 * **Finite-State-Machine-based Game Control**
 * **Embedded System Design**
+--->
 
 ---
+
+<!--
 
 ## Project Highlights
 
@@ -687,18 +691,20 @@ The project integrates multiple peripheral interfaces:
 ```text
 8051
  |
- +-- GPIO  ------> Buttons / Buzzer
+ +-- GPIO  ------ Buttons / Buzzer
  |
- +-- I²C  -------> SSD1306 OLED
+ +-- I²C  ------- SSD1306 OLED
  |
  +-- Serial / GPIO interface
                   |
-                  +--> MAX7219
+                  +-- MAX7219
 ```
 
 ### Interactive Embedded Application
 
 Instead of implementing an isolated peripheral experiment, this project combines multiple hardware interfaces into a complete interactive game.
+
+
 
 ---
 
@@ -723,6 +729,7 @@ Through this project, the following concepts were practiced:
 * Embedded software debugging
 
 ---
+--->
 
 ## Course
 
